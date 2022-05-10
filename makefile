@@ -1,14 +1,11 @@
-clean:
-	rm -r tmp/* | true
+TEST_SITE := test/fixtures/hexo-site
 
-copy-site-to-tmp:
-	cp -r ~/workspace/gregmakesxyz/hexo-site/* tmp/
+clean:
+	rm -r ${TEST_SITE}/themes/THIS_THEME/* | true; \
+	rm -r ${TEST_SITE}/public/* | true
 
 inject-theme:
-	rm -r tmp/themes/gregmakesxyz-hexo-theme/*; \
-	cp -r layout/ tmp/themes/gregmakesxyz-hexo-theme; \
-	cp -r source/ tmp/themes/gregmakesxyz-hexo-theme; \
-	cp _config.yml tmp/themes/gregmakesxyz-hexo-theme; \
+	cp -r src/* test/fixtures/hexo-site/themes/THIS_THEME
 
-serve: clean copy-site-to-tmp inject-theme
-	npx hexo server --draft --cwd tmp
+serve: clean inject-theme
+	npx hexo server --draft --cwd ${TEST_SITE}
