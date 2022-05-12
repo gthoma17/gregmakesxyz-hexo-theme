@@ -1,6 +1,7 @@
 ---
-title: Test Post
+title: Latest Post
 tags: ["test", "post", "tags"]
+date: 2022-01-01T0:00:00.000Z
 ---
 
 This ought to be a paragraph
