@@ -4,6 +4,8 @@ DEV_SERVER_PID	:= $(shell lsof -i :4000 | grep node | awk '{print $$2}')
 clean:
 	@make stop; \
 	rm -r ${TEST_SITE}/themes/THIS_THEME/* 2>/dev/null | true; \
+	rm -r ${TEST_SITE}/db.json 2>/dev/null | true; \
+
 	rm -r ${TEST_SITE}/public/* 2>/dev/null | true
 
 inject-theme:
