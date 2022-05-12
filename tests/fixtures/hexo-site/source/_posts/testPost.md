@@ -1,39 +1,18 @@
 ---
-title: Hello World
-tags: ["test", "post"]
+title: Test Post
+tags: ["test", "post", "tags"]
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+This ought to be a paragraph
 
-### Create a new post
+# This ought to be an h1
 
-``` bash
-$ hexo new "My New Post"
-```
+## This ought to be an h2
 
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
+### This ought to be an h3
 
 ``` bash
-$ hexo server
+$ echo "This ought to be formatted as bash"
 ```
 
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+[This ought to be a link](#)
