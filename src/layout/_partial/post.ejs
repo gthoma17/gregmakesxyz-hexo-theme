@@ -7,18 +7,12 @@
         </a>
     </h2>
 
-    <!-- Date and Author -->
+    <!-- Post Date -->
     <p class="blog-post-meta">
         <%= item.date.format(config.date_format) %>
     </p>
 
     <!-- Content -->
     <%- item.content %>
-
-    <hr />
-
-    <!-- Tags and Categories links -->
-    <%- partial('article-tags', {item: item}) %>
-    <%- partial('article-categories', {item: item}) %>
 
 </div>
