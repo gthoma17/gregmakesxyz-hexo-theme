@@ -5,16 +5,14 @@ test.describe('index.html', ()=>{
 
   test.beforeEach(async ({ page }) => await page.goto('http://localhost:4000'));
 
-  test.describe('<head>', ()=>{
 
-    test('has <title> from config', async ({ page }) => {
-      await expect(page).toHaveTitle(config.title);
-    });
+  test('<head> has <title> from config', async ({ page }) => {
+    await expect(page).toHaveTitle(config.title);
+  });
 
-    test('displays _only_ the latest post', async ({ page }) => {
-      await expect(page.locator("text=This is the latest post")).toBeVisible()
-      await expect(page.locator("text=This is an older post")).not.toBeVisible()
-    });
+  test('displays the homepage post content but not title', async ({ page }) => {
+    await expect(page.locator("text=This is the landing page")).toBeVisible()
+    await expect(page.locator("text=homepage")).not.toBeVisible()
+  });
 
-  })
 })

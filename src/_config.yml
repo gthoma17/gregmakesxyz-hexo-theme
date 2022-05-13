@@ -9,3 +9,5 @@ excerpt_link: Read More
 # Widgets List
 widgets:
   tags: true
+
+homepage_post_title: homepage

@@ -1,2 +1,16 @@
 <!--This template is used for posts-->
-<%- partial('_partial/post', {item: page}) %>
+<%- partial('_partial/menu') %>
+
+<div class="container">
+    <!-- Blog Header: title and subtitle -->
+    <%- partial('_partial/header') %>
+
+    <div class="row">
+
+        <!-- Main Content -->
+        <div class="col-sm-8 blog-main">
+            <%- partial('_partial/post', {item: page}) %>
+        </div>
+
+    </div>
+</div>
