@@ -11,6 +11,10 @@ test.describe('index.html', ()=>{
       await expect(page).toHaveTitle(config.title);
     });
 
+    test('displays _only_ the latest post', async ({ page }) => {
+      await expect(page.locator("text=This is the latest post")).toBeVisible()
+      await expect(page.locator("text=This is an older post")).not.toBeVisible()
+    });
+
   })
 })
-

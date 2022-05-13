@@ -1,6 +1,3 @@
 <!-- This template is used on the landing page -->
-<% page.posts.each(function(item){ %>
-<%- partial('_partial/article-excerpt', {item: item}) %>
-<% }); %>
-
-<%- partial('_partial/pagination') %>
+<!-- `page.posts` is a [Warehouse](https://hexojs.github.io/warehouse/) -->
+<%- partial('_partial/post', {item: page.posts.first()}) %>
