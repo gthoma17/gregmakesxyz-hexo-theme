@@ -2,3 +2,5 @@ tmp/
 node_modules
 tests/fixtures/hexo-site/db.json
 tests/fixtures/hexo_site_config_as_json.json
+.idea/
+tests/fixtures/hexo-site/themes/THIS_THEME
