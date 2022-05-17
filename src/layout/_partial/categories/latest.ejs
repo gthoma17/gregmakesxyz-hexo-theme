@@ -1,0 +1,8 @@
+<%
+    var latestPost = site
+        .categories
+        .findOne({name: categoryName})
+        .posts
+        .sort("date", -1)
+        .data[0]                                         %>
+<%- partial('_partial/post_content', {item: latestPost}) -%>

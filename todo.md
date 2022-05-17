@@ -1,19 +1,20 @@
 ### Current task: 
-Make the "Latest Post Only" (Resume) Category
+Make the blog Category
 ___
 
 * make basic theme
-  - category display types (blog, gallery, latest post only [optionally exclude from archive], merged by weight)  
+  - category display types  
     - ~~Merged by Weight ("weighted")~~
-    - Latest Post Only ("latest")
+    - ~~Latest Post Only ("latest")~~
     - Standard Blog ("blog")
     - Project Galley ("gallery")
   - configurable footer
   - homepage hero image
   - Configurable category types
   - all categories page
-    - exclude "weighted" categories
-    - exclude "latest" categories
+    - option to exclude "weighted" categories
+    - option to exclude "latest" categories
   - tags ???
   - Auto generated navbar
+  - add pagination to blog and gallery categories
 * add image resizing

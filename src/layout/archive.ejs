@@ -1,16 +1,19 @@
 <!-- This template is used to /tags/* and /archives -->
-<%- partial('_partial/menu') %>
+<%
+    if(page.category === "resume"){ %>
+<%-     partial('_partial/categories/latest', {categoryName: "resume"}) %>
+<%  } else { %>
+        <%- partial('_partial/menu') %>
+        <div class="container">
+            <div class="row">
 
-<div class="container">
-    <!-- Blog Header: title and subtitle -->
-    <%- partial('_partial/header') %>
+                <!-- Main Content -->
+                <div class="col-sm-8 blog-main">
+                    <div />
+                </div>
 
-    <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
-            <div />
+            </div>
         </div>
-
-    </div>
-</div>
+<%
+    }
+%>

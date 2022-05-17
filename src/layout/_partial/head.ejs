@@ -8,13 +8,19 @@
     <link rel="icon" href="favicon/favicon.ico">
 
     <%
+        function toTitleCase(str) {
+            return str.toLowerCase().split(' ').map(function (word) {
+                return (word.charAt(0).toUpperCase() + word.slice(1));
+            }).join(' ');
+        }
+
         var title = [];
-        if (page.title) title.push(page.title);
-        if (page.category) title.push(page.category);
-        if (page.tag) title.push(page.tag);
+        if (page.title) title.push(toTitleCase(page.title));
+        if (page.category) title.push(toTitleCase(page.category));
+        if (page.tag) title.push(toTitleCase(page.tag));
         title.push(config.title);
     %>
-    <title><%= title.join(' - ') %></title>
+    <title><%= title.join(' | ') %></title>
 
     <!-- Bootstrap core CSS -->
     <%- css('bootstrap/css/bootstrap.min.css') %>
