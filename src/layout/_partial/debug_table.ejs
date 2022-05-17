@@ -1,0 +1,37 @@
+<section class="debug">
+    <table class="table">
+        <tr>
+            <th colspan="2" style="text-align: center">
+                Debug info for <%- name -%>
+            </th>
+        </tr>
+        <tr>
+            <td><%- "typeof " + name -%></td>
+            <td><%- typeof item -%></td>
+        </tr>
+        <% if (item) { %>
+            <tr>
+                <td><%- name + ".toString()" -%></td>
+                <td><%- name.toString() -%></td>
+            </tr>
+            <% if ('object' === typeof item) { %>
+                <tr>
+                    <td><%- "Object.keys(" + name + ")" -%></td>
+                    <td><%- "[" + Object.keys(item) + "]" -%></td>
+                </tr>
+            <% } %>
+            <% if ('length' in item) { %>
+                <tr>
+                    <td><%- name + ".length" -%></td>
+                    <td><%- item.length -%></td>
+                </tr>
+            <% } %>
+        <% } else {%>
+            <tr>
+                <td colspan="2"><%- name + "was falsey!!!" -%></td>
+            </tr>
+        <% }%>
+    </table>
+
+    <hr />
+</section>
