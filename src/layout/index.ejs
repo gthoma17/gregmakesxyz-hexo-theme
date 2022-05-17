@@ -1,15 +1,4 @@
 <!-- This template is used on the landing page -->
 <!-- `page.posts` is a [Warehouse](https://hexojs.github.io/warehouse/) -->
 
-
-
-
-<%
-    theme['homepage_post'] = page
-            .posts
-            .findOne(
-                (post) => post.source === theme['homepage_post_title']
-            )
-%>
-
-<%- partial('_partial/homepage', {main: theme['homepage_post']}) %>
+<%- partial('_partial/categories/merged', {categoryName: "homepage"}) %>

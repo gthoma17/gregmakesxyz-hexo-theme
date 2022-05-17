@@ -1,6 +1,7 @@
 ---
 title: Latest Post
 tags: ["test", "post", "tags"]
+categories: ["blog"]
 date: 2022-01-01T0:00:00.000Z
 ---
 

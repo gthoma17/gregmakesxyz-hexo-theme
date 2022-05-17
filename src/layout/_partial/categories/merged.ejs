@@ -1,0 +1,9 @@
+<%
+    site
+        .categories
+        .findOne({name: categoryName})
+        .posts
+        .sort("weight")
+        .each((item) => {                                   %>
+<%-         partial('_partial/post_content', {item: item}) -%>
+<% });                                                      %>

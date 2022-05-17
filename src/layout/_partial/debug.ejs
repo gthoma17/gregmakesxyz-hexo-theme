@@ -1,5 +1,25 @@
-<% console.log("typeof ", name, " === ", typeof item) %>
-<% console.log("Keys for ", name) %>
-<% console.log(Object.keys(item)) %>
-<% console.log(name, ".toString() === ", item.toString()) %>
-<% console.log("----------------") %>
+<section class="debug">
+    <table class="table">
+        <tr>
+            <th colspan="2" style="text-align: center">
+                Debug info for <%- name -%>
+            </th>
+        </tr>
+        <tr>
+            <td><%- "typeof " + name -%></td>
+            <td><%- typeof item -%></td>
+        </tr>
+        <tr>
+            <td><%- "Object.keys(" + name + ")" -%></td>
+            <td><%- "[" + Object.keys(item) + "]" -%></td>
+        </tr>
+        <% if ('length' in item) { %>
+            <tr>
+                <td><%- name + ".length" -%></td>
+                <td><%- item.length -%></td>
+            </tr>
+        <% } %>
+    </table>
+
+    <hr />
+</section>
