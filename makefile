@@ -10,8 +10,11 @@ clean:
 inject-theme:
 	@cp -r src/* ${TEST_SITE}/themes/THIS_THEME
 
-run-playwright: 
+run-playwright-full:
 	npx playwright test --browser=all
+
+run-playwright-quick:
+	npx playwright test --browser=firefox
 
 generate-test-fixtures:
 	@yq -j eval tests/fixtures/hexo-site/_config.yml 2>/dev/null > tests/fixtures/hexo_site_config_as_json.json
@@ -32,9 +35,8 @@ background-serve: clean inject-theme
 serve: clean inject-theme
 	npx hexo server --draft --cwd ${TEST_SITE}
 
-test: background-serve generate-test-fixtures run-playwright stop
+test: background-serve generate-test-fixtures run-playwright-full stop
 	@echo "\n\n~--- Test Run Complete ---~"
 
-
-
-
+test-quick: background-serve generate-test-fixtures run-playwright-quick stop
+	@echo "~~~ 😎👉👉 ~~~";\
