@@ -2,6 +2,7 @@
 Make the gallery category
 * ~~render each post with a photo and title~~
 * make it look like a gallery ¯\_(ツ)_/¯
+* gallery item page
 * gallery posts can have more than one image ???
 
 

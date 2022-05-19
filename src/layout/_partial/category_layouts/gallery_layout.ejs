@@ -1,9 +1,31 @@
 <style>
-    .gallery {
+    .gallery-contents {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .gallery-title {
+        text-transform: capitalize;
     }
 </style>
-<main class="gallery">
-    <%- partial('_partial/categories/gallery', {categoryName}) %>
+
+<%- partial('_partial/menu') %>
+<%- partial('_partial/debug_table', {name: "page", item: page}) %>
+
+<hr />
+<%- page.category -%>
+<hr />
+<main class="container">
+    <div class="row gallery">
+        <!-- Main Content -->
+        <header class="gallery-title">
+            <h1><%- page.category -%></h1>
+        </header>
+        <div class="gallery-contents">
+            <%- partial('_partial/categories/gallery', {categoryName}) %>
+        </div>
+    </div>
 </main>
+
+<div class="container">
+
+</div>

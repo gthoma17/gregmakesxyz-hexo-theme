@@ -1,5 +1,18 @@
+<style>
+    .gallery-title-image{
+        display: block;
+        max-width:250px;
+        max-height:250px;
+        width: auto;
+        height: auto;
+    }
+</style>
+
 <div class="gallery-excerpt">
-    <img src="/<%- item.image -%>" alt="title image for <%- item.title -%>" />
-    <header><%- item.title %></header>
-    <%= item.date.format(config.date_format) %>
+    <img
+            class="gallery-title-image"
+            src="/<%- item.image -%>"
+            alt="title image for <%- item.title -%>"
+    />
+    <h2 class="gallery-title"><%- item.title %></h2>
 </div>
