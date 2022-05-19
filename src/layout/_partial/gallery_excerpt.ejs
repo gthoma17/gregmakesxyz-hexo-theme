@@ -1,0 +1,5 @@
+<div class="gallery-excerpt">
+    <img src="/<%- item.image -%>" alt="title image for <%- item.title -%>" />
+    <header><%- item.title %></header>
+    <%= item.date.format(config.date_format) %>
+</div>

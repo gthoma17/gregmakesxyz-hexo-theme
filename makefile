@@ -35,6 +35,9 @@ background-serve: clean inject-theme
 serve: clean inject-theme
 	npx hexo server --draft --cwd ${TEST_SITE}
 
+generate: clean inject-theme
+	npx hexo generate --cwd ${TEST_SITE}
+
 test: background-serve generate-test-fixtures run-playwright-full stop
 	@echo "\n\n~--- Test Run Complete ---~"
 

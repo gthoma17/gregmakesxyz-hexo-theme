@@ -1,0 +1,9 @@
+<%
+site
+        .categories
+        .findOne({name: categoryName})
+        .posts
+        .sort("date", -1)
+        .each((item) => {                                      %>
+<%-         partial('_partial/gallery_excerpt', {item: item}) -%>
+<% });                                                         %>
