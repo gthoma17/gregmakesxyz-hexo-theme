@@ -11,3 +11,6 @@ widgets:
   tags: true
 
 homepage_post_title: homepage
+
+gallery_max_height: 100px
+gallery_max_width: 100px
