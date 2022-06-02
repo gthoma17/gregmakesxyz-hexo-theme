@@ -15,7 +15,7 @@
 <% if(item){ %>
     <% if ('object' === typeof item){ %>
         <% console.log(`Object.keys(${name}) === ${Object.keys(item)}`) %>
-        <% typeof serializeObject !== 'undefined' && serializeObject && console.log(`JSON.stringify(${name}) === ${JSON.stringify(item, getCircularReplacer())}`) %>
+            <% typeof serializeObject !== 'undefined' && serializeObject && console.log(`JSON.stringify(${name}) === ${JSON.stringify(item, getCircularReplacer())}`) %>
     <% } else { %>
         <% console.log(`${name}.toString()" === ${item.toString()}`) %>
     <% } %>

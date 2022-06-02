@@ -1,6 +1,5 @@
 <!-- This template is used to /tags/* and /archives -->
-<%
-    if(page.category === "resume"){ %>
+<%  if(page.category === "resume"){ %>
 <%-     partial('_partial/categories/latest', {categoryName: page.category}) %>
 <%  } else if(page.category === "projects"){ %>
 <%-     partial('_partial/category_layouts/gallery_layout', {categoryName: page.category}) %>

@@ -1,7 +1,8 @@
 ### Current task: 
 Make the gallery category
 * ~~render each post with a photo and title~~
-* make it look like a gallery ¯\_(ツ)_/¯ (INSPIRATION)[https://origami.kosmulski.org/albums/showcase]
+* ~~make it look like a gallery ¯\_(ツ)_/¯~~
+   * (INSPIRATION)[https://origami.kosmulski.org/albums/showcase]~~
 * gallery item page
 * clicking an image shows it full size? (might be hard without js)[https://dev.to/madsstoumann/accessible-modal-with-or-without-javascript-3g1d]
 * gallery posts can have more than one image ??? (INSPIRATION)[https://css-tricks.com/css-only-carousel/]
@@ -19,6 +20,9 @@ ___
     - Gallery Item
     - Blog Item
   - configurable footer
+___
+^ needed to migrate the existing site ^
+___
   - homepage hero image
   - Configurable category types
   - all categories page

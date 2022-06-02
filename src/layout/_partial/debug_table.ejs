@@ -10,24 +10,25 @@
             <td><%- "typeof " + name -%></td>
             <td><%- typeof item -%></td>
         </tr>
-        <% if (item) { %>
+        <% if ('object' === typeof item) { %>
             <tr>
-                <td><%- name + ".toString()" -%></td>
-                <td><%- name.toString() -%></td>
+                <td><%- "Object.keys(" + name + ")" -%></td>
+                <td><%- "[" + Object.keys(item) + "]" -%></td>
             </tr>
-            <% if ('object' === typeof item) { %>
-                <tr>
-                    <td><%- "Object.keys(" + name + ")" -%></td>
-                    <td><%- "[" + Object.keys(item) + "]" -%></td>
-                </tr>
-            <% } %>
             <% if ('length' in item) { %>
                 <tr>
                     <td><%- name + ".length" -%></td>
                     <td><%- item.length -%></td>
                 </tr>
             <% } %>
-        <% } else {%>
+        <% } %>
+        <% if (item && 'object' !== typeof item) { %>
+            <tr>
+                <td><%- name + ".toString()" -%></td>
+                <td><%- item.toString() -%></td>
+            </tr>
+        <% } %>
+        <% if (!item) {%>
             <tr>
                 <td colspan="2"><h3><%- name + " was falsey!!!" -%></h3></td>
             </tr>

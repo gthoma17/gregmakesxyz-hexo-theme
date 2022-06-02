@@ -1,4 +1,9 @@
 <style>
+    .gallery-excerpt {
+        border: 3px dotted green;
+
+
+    }
     .gallery-title-image{
         display: block;
         max-width:<%- theme.gallery_max_width -%>;
@@ -7,12 +12,14 @@
         height: auto;
     }
 </style>
-
 <div class="gallery-excerpt">
     <img
             class="gallery-title-image"
             src="<%- item.image -%>"
             alt="title image for <%- item.title -%>"
     />
-    <h2 class="gallery-title"><%- item.title %></h2>
+    <h2 class="gallery-title"><a href="/<%- item.path %>"><%- item.title %></a></h2>
+    <% if (item.excerpt) { %>
+        <p><%- item.excerpt -%></p>
+    <% } %>
 </div>
